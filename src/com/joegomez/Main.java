@@ -14,12 +14,13 @@ public class Main {
     bank.addCustomer("Sydney", "Bob", 150.54);
 
     bank.addCustomerTransaction("Adelaide", "Tim", 44.22);
-    bank.addCustomerTransaction("Adelaide", "Tim", 12.44);
-    bank.addCustomerTransaction("Adelaide", "Tim", 1.65);
+    bank.addCustomerTransaction("Adelaide", "Mike", 12.44);
+    bank.addCustomerTransaction("Adelaide", "Percy", 1.65);
 
 
 
-    bank.listCustomers("Adelaide", false);
+    bank.listCustomers("Adelaide", true);
+    bank.listCustomers("Sydney", true);
 
 
 
