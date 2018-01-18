@@ -5,6 +5,10 @@ public class Main {
     public static void main(String[] args) {
     Bank bank = new Bank("National Australia Bank");
 
+    if(bank.addBranch("Adelaide")){
+        System.out.println("Adelaide branch already created");
+    }
+
     bank.addBranch("Adelaide");
     bank.addCustomer("Adelaide", "Tim", 50.05);
     bank.addCustomer("Adelaide", "Mike", 175.34);
@@ -21,6 +25,21 @@ public class Main {
 
     bank.listCustomers("Adelaide", true);
     bank.listCustomers("Sydney", true);
+
+    bank.addBranch("Melbourne");
+
+    if(!bank.addCustomer("Melbourne", "Brian", 5.53)){
+        System.out.println("Error Melbourne branch does not exist");
+    }
+    if(!bank.addBranch("Adelaide")){
+        System.out.println("Adelaide branch already exists");
+    }
+
+    if(!bank.addCustomerTransaction("Adelaide", "Fergus", 52.33)){
+        System.out.println("Customer does not exist at branch");
+    }
+
+    
 
 
 
